@@ -25,10 +25,8 @@ const ToggleWrapper = styled.label`
 const ToggleCheckBox = styled.input`
   display: none;
   &:checked + span {
-    transform: scaleX(1);
-    opacity: 1;
     &:before {
-      transform: scaleX(1);
+      transform: translate(-100%, -50%) scale(2);
     }
     &:after {
       transform: translateX(40px);
@@ -38,30 +36,27 @@ const ToggleCheckBox = styled.input`
 
 const ToggleLabel = styled.span`
   position: relative;
-  cursor: pointer;
+  background-color: lightgray;
+  display: block;
   width: 75px;
   height: 35px;
-  border-radius: 100px;
-  background-color: lightgray;
-  position: relative;
+  border-radius: 25px;
+  cursor: pointer;
 
-  &:before {
-    content: " ";
-    transition: all 0.4s ease;
-    -moz-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    transform: scaleX(0);
-    -webkit-transform: scaleX(0);
-    width: 75px;
-    height: 35px;
-    border-radius: 20px;
-    float: left;
-    background-color: #6600ff;
-    opacity: 1;
-    transform-origin: 0 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #6600ff;
+    transform: translate(-100%, -50%) scale(1);
+    transform-origin: left;
+    transition: transform 0.5s ease;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 5px;
