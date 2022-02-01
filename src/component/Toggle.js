@@ -3,16 +3,7 @@ import styled from "styled-components";
 
 const Base = styled.div`
   width: 100%;
-  height: 300px;
-`;
-
-const ToggleWrapper = styled.label`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 100px;
+  height: 200px;
 `;
 
 const ToggleText = styled.div`
@@ -20,27 +11,57 @@ const ToggleText = styled.div`
   font-weight: bold;
 `;
 
+const ToggleWrapper = styled.label`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  width: fit-content;
+  margin: 10px auto;
+  margin-top: 25px;
+`;
+
 const ToggleCheckBox = styled.input`
   display: none;
   &:checked + span {
-    background-color: #6600ff;
+    transform: scaleX(1);
+    opacity: 1;
     &:before {
+      transform: scaleX(1);
+    }
+    &:after {
       transform: translateX(40px);
     }
   }
 `;
 
 const ToggleLabel = styled.span`
-  display: flex;
+  position: relative;
   cursor: pointer;
   width: 75px;
   height: 35px;
   border-radius: 100px;
   background-color: lightgray;
   position: relative;
-  transition: background-color 0.2s;
 
   &:before {
+    content: " ";
+    transition: all 0.4s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    width: 75px;
+    height: 35px;
+    border-radius: 20px;
+    float: left;
+    background-color: #6600ff;
+    opacity: 1;
+    transform-origin: 0 100%;
+  }
+
+  &:after {
     content: "";
     position: absolute;
     top: 5px;
@@ -48,13 +69,15 @@ const ToggleLabel = styled.span`
     width: 25px;
     height: 25px;
     border-radius: 21px;
-    transition: 0.5s;
+    transition: transform 0.5s;
     background-color: white;
   }
 `;
 
 const SwitchText = styled.div`
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   font-weight: 500;
 `;
@@ -76,8 +99,8 @@ export default function Toggle() {
           onChange={handleToggled}
         />
         <ToggleLabel />
-        <SwitchText>Toggle Switch {isToggled ? "ON" : "OFF"}</SwitchText>
       </ToggleWrapper>
+      <SwitchText>Toggle Switch {isToggled ? "ON" : "OFF"}</SwitchText>
     </Base>
   );
 }
