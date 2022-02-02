@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Base = styled.div`
-  width: 100%;
-  height: 200px;
+  width: 90%;
+  height: 300px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px auto;
 `;
 
 const ToggleText = styled.div`
@@ -18,8 +22,7 @@ const ToggleWrapper = styled.label`
   flex-direction: column;
   margin-top: 100px;
   width: fit-content;
-  margin: 10px auto;
-  margin-top: 25px;
+  margin: 90px auto 10px;
 `;
 
 const ToggleCheckBox = styled.input`
