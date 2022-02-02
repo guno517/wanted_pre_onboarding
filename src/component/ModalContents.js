@@ -2,13 +2,16 @@ import React, { useCallback, useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const ModalBackground = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 103%;
+  height: 330px;
+  padding: 0;
+  margin: 0;
   background: rgba(0, 0, 0, 0.25);
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(-17px);
 `;
 
 const ModalWrapper = styled.div`
