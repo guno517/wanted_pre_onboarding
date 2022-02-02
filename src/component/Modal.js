@@ -3,8 +3,12 @@ import styled from "styled-components";
 import ModalContents from "./ModalContents";
 
 const Base = styled.div`
-  width: 100%;
+  width: 90%;
   height: 300px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px auto;
 `;
 
 const ModalText = styled.div`
