@@ -10,11 +10,11 @@ function App() {
 
   return (
     <div className="App">
-      {/*<Toggle />
+      <Toggle />
       <Modal />
       <Tab />
       <Tag />
-      <ClickToEdit />*/}
+      <ClickToEdit />
       <AutoComplete inputText={inputText} />
     </div>
   );
