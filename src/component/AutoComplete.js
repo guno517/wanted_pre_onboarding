@@ -48,13 +48,12 @@ const CloseBtn = styled.span`
   font-weight: bolder;
   text-align: center;
   background: white;
-  top: 0;
-  bottom: 0;
   right: 6%;
   margin: auto;
   padding: 0;
   outline: none;
   cursor: pointer;
+  transform: translateY(-30px);
 `;
 
 const Ul = styled.ul`
