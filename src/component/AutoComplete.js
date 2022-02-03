@@ -6,42 +6,78 @@ const Base = styled.div`
   height: 300px;
   border: 2px solid lightgray;
   border-radius: 10px;
-  padding: 10px;
   margin: 5px auto;
+`;
+
+const AutoCompleteText = styled.div`
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+`;
+
+const InputWrapper = styled.div`
+  width: 100%;
+  border: 1px solid lightgray;
+  margin: 90px auto 0 auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  &:focus-within {
+    box-shadow: 0 5px 5px 5px lightgray;
+  }
 `;
 
 const InputForm = styled.input`
   width: 100%;
-  height: 36px;
-  border: 1px solid lightgray;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
   border-radius: 10px;
+  box-sizing: border-box;
+`;
 
-  &:focus {
-    outline: none;
-    box-shadow: 0px 3px 3px 3px lightgray;
-  }
+const CloseBtn = styled.span`
+  position: absolute;
+  border: none;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: center;
+  background: white;
+  top: 0;
+  bottom: 0;
+  right: 6%;
+  margin: auto;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
 `;
 
 const Ul = styled.ul`
-  width: 100%;
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  z-index: 1;
-  border: 1px solid lightgray;
+  border-top: 1px solid lightgray;
 `;
 
 const LI = styled.li`
+  padding: 0 10px;
+  margin: 10px auto;
   &:hover {
     background: lightgray;
   }
 `;
 
-export default function AutoCoplete({ inputText }) {
+export default function AutoComplete({ inputText }) {
   const [searchText, setSearchText] = useState("");
   const [complete, setComplete] = useState([]);
 
   let completion = [];
+
   const handleChange = (e) => {
     let inputWord = e.target.value;
     completion = [];
@@ -58,7 +94,7 @@ export default function AutoCoplete({ inputText }) {
 
   const completionSelected = (value) => {
     setSearchText(value);
-    completion = [];
+    //setComplete([]);
   };
 
   const getCompletions = () => {
@@ -81,9 +117,19 @@ export default function AutoCoplete({ inputText }) {
 
   return (
     <Base>
-      <div>AutoCoplete</div>
-      <InputForm type={"text"} onChange={handleChange} />
-      {getCompletions()}
+      <AutoCompleteText>AutoCoplete</AutoCompleteText>
+      <InputWrapper>
+        <InputForm value={searchText} type={"text"} onChange={handleChange} />
+        <CloseBtn
+          onClick={() => {
+            setSearchText("");
+            setComplete([]);
+          }}
+        >
+          X
+        </CloseBtn>
+        {getCompletions()}
+      </InputWrapper>
     </Base>
   );
 }
