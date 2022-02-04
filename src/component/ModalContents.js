@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const ModalBackground = styled.div`
-  width: 103%;
-  height: 330px;
+  width: 100%;
+  height: 305px;
   padding: 0;
   margin: 0;
   background: rgba(0, 0, 0, 0.25);
@@ -11,7 +11,8 @@ const ModalBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-17px);
+  transform: translateY(-28px);
+  box-sizing: border-box;
 `;
 
 const ModalWrapper = styled.div`
