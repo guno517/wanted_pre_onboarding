@@ -6,46 +6,97 @@ const Base = styled.div`
   height: 300px;
   border: 2px solid lightgray;
   border-radius: 10px;
-  padding: 10px;
   margin: 5px auto;
+`;
+
+const Head = styled.div`
+  display: flex;
 `;
 
 const TabText = styled.div`
   font-size: 24px;
   font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: fit-content;
 `;
 
-const TabWapper = styled.ul`
+const TabMenuBar = styled.ul`
+  width: 100%;
   list-style: none;
   display: flex;
-  justify-content: space-around;
-`;
-
-const TabMenu = styled.li``;
-
-const TabContentWrapper = styled.div`
-  display: flex;
+  color: white;
+  height: 50px;
+  background: lightgray;
   justify-content: center;
   align-items: center;
 `;
 
-const TabContent = styled.div``;
+const TabMenu = styled.li`
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+`;
+
+const TabContentWrapper = styled.div`
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+const TabContent = styled.div`
+  text-align: center;
+  margin: 50px auto;
+  font-weight: bold;
+`;
 
 export default function Tab() {
-  const [showTab, setShowTab] = useState(1);
+  const [selectedTab, setSelectedTab] = useState(0);
+  const TabArr = [
+    { title: "Tab1", content: "Tabe menu ONE" },
+    { title: "Tab2", content: "Tabe menu TWO" },
+    { title: "Tab3", content: "Tabe menu THREE" },
+  ];
+
+  const handleClickMenu = (index) => {
+    setSelectedTab(index);
+  };
+
+  const selectedStyle = {
+    background: "#6600ff",
+    width: "100%",
+    cursor: "pointer",
+  };
+
+  const nonSelectedStyle = {
+    background: "lightgray",
+    width: "100%",
+    cursor: "pointer",
+  };
 
   return (
     <Base>
-      <TabText>Tab</TabText>
-      <TabWapper>
-        <TabMenu>Tab1</TabMenu>
-        <TabMenu>Tab2</TabMenu>
-        <TabMenu>Tab3</TabMenu>
-      </TabWapper>
+      <Head>
+        <TabText>Tab</TabText>
+        <TabMenuBar>
+          {TabArr.map((item, index) => {
+            return (
+              <TabMenu
+                key={index}
+                onClick={() => handleClickMenu(index)}
+                style={selectedTab === index ? selectedStyle : nonSelectedStyle}
+              >
+                {item.title}
+              </TabMenu>
+            );
+          })}
+        </TabMenuBar>
+      </Head>
       <TabContentWrapper>
-        <TabContent>Tab Menu1</TabContent>
-        <TabContent>Tab Menu2</TabContent>
-        <TabContent>Tab Menu3</TabContent>
+        <TabContent>{TabArr[selectedTab].content}</TabContent>
       </TabContentWrapper>
     </Base>
   );
