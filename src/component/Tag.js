@@ -6,13 +6,14 @@ const Base = styled.div`
   height: 300px;
   border: 2px solid lightgray;
   border-radius: 10px;
-  padding: 10px;
   margin: 5px auto;
 `;
 
 const TagText = styled.div`
   font-size: 24px;
   font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
 `;
 
 const InputWrapper = styled.div`
