@@ -25,7 +25,7 @@ const TabMenuBar = styled.ul`
   width: 100%;
   list-style: none;
   display: flex;
-  color: white;
+  color: gray;
   height: 50px;
   background: lightgray;
   justify-content: center;
@@ -69,6 +69,7 @@ export default function Tab() {
     background: "#6600ff",
     width: "100%",
     cursor: "pointer",
+    color: "white",
   };
 
   const nonSelectedStyle = {
