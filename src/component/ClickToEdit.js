@@ -44,6 +44,14 @@ const Label = styled.label`
 
 const Input = styled.input`
   text-align: center;
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   &:focus {
     outline-color: skyblue;
   }
@@ -58,6 +66,8 @@ export default function ClickToEdit() {
   const [name, setName] = useState("김코딩");
   const [age, setAge] = useState("20");
 
+  const focusAll = (e) => e.target.select();
+
   return (
     <Base>
       <EditText>ClickToEdit</EditText>
@@ -65,13 +75,20 @@ export default function ClickToEdit() {
         <NameWrapper>
           <Label>이름</Label>
           <Input
+            type={"text"}
             onBlur={(e) => setName(e.target.value)}
             defaultValue={"김코딩"}
+            onFocus={focusAll}
           />
         </NameWrapper>
         <AgeWrapper>
           <Label>나이</Label>
-          <Input onBlur={(e) => setAge(e.target.value)} defaultValue={20} />
+          <Input
+            type={"number"}
+            onBlur={(e) => setAge(e.target.value)}
+            defaultValue={20}
+            onFocus={focusAll}
+          />
         </AgeWrapper>
         <ResultWrapper>
           <Name>이름 {name} </Name>
