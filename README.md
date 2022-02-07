@@ -4,7 +4,7 @@
 
 ---
 
-![Toggle.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/33302bd2-46c9-4124-8474-5c9f603cfc86/Toggle.gif)
+![Toggle](https://user-images.githubusercontent.com/60571418/152779074-083d05b8-53f4-414f-bea9-d7808c6fd214.gif)
 
 ### 💡구현 방법
 
@@ -45,7 +45,7 @@
 
 ---
 
-![Modal.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9843fdfc-f5d2-4136-b203-398746600fab/Modal.gif)
+![Modal](https://user-images.githubusercontent.com/60571418/152779184-027d276e-e023-471c-bdfc-383dc6f305bd.gif)
 
 ### 💡구현 방법
 
@@ -83,7 +83,7 @@
 
 ---
 
-![Tab.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/956acb62-c31c-4723-9043-18dfe11a69bf/Tab.gif)
+![Tab](https://user-images.githubusercontent.com/60571418/152779192-1a288a02-760c-4447-ae54-7fb50fbc9366.gif)
 
 ### 💡구현 방법
 
@@ -110,7 +110,7 @@
 
 ---
 
-![Tag.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60c84b52-534d-4861-9a00-d8032902f670/Tag.gif)
+![Tag](https://user-images.githubusercontent.com/60571418/152779199-b3217f53-d0e7-40cb-8942-636a8f9bf6b2.gif)
 
 ### 💡구현 방법
 
@@ -141,7 +141,7 @@
 
 ---
 
-![AutoComplete.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ed41636-bbd2-49a6-8496-04c406438594/AutoComplete.gif)
+![AutoComplete](https://user-images.githubusercontent.com/60571418/152779205-96b9aa47-7d65-43ae-ad8a-98e9178f2ab6.gif)
 
 ### 💡구현 방법
 
@@ -180,7 +180,7 @@
 
 ---
 
-![ClickToEdit.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7bef14a7-eb14-4a1e-8923-9a18b9309542/ClickToEdit.gif)
+![ClickToEdit](https://user-images.githubusercontent.com/60571418/152779207-f791f25e-88ed-4b4d-916d-6b0eb30d6eaa.gif)
 
 ### 💡구현 방법
 
