@@ -19,7 +19,7 @@ const AutoCompleteText = styled.div`
 const InputWrapper = styled.div`
   width: 100%;
   border: 1px solid lightgray;
-  margin: 90px auto 0 auto;
+  margin: 70px auto 0 auto;
   border-radius: 10px;
   box-sizing: border-box;
   &:focus-within {
