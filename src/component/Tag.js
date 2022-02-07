@@ -26,9 +26,9 @@ const InputWrapper = styled.div`
 const InputForm = styled.div`
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
-  height: 48px;
+  height: fit-content;
   min-width: 500px;
+  flex-wrap: wrap;
   border: 1px solid lightgray;
   border-radius: 10px;
   &:focus-within {
@@ -39,6 +39,7 @@ const InputForm = styled.div`
 const TagList = styled.ul`
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
   padding: 0;
   margin: 7px 0 0 0;
 `;
@@ -50,7 +51,7 @@ const TagListItem = styled.li`
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  margin: 0 5px;
+  margin: 2px 5px;
   color: white;
   background: #6600ff;
   border-radius: 5px;
@@ -98,7 +99,9 @@ const InputTag = (props) => {
   };
 
   const deleteTag = (deleteTagItem) => {
-    setTagItems([...tagItems.filter((_, index) => index !== deleteTagItem)]);
+    setTagItems([
+      ...tagItems.filter((_tagItems, index) => index !== deleteTagItem),
+    ]);
   };
 
   return (
@@ -121,11 +124,12 @@ const InputTag = (props) => {
 };
 
 export default function Tag() {
+  const tagItems = ["CodeStates", "JJang"];
   return (
     <Base>
       <TagText>Tag</TagText>
       <InputWrapper>
-        <InputTag tagItems={["CodeStates", "JJang"]} />
+        <InputTag tagItems={tagItems} />
       </InputWrapper>
     </Base>
   );
