@@ -38,10 +38,10 @@ const ModalButton = styled.button`
 `;
 
 export default function Modal() {
-  const [openModal, setOpenModal] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const showModal = () => {
-    setOpenModal(!openModal);
+    setIsOpenModal(!isOpenModal);
   };
   return (
     <>
@@ -49,7 +49,10 @@ export default function Modal() {
         <ModalText>Modal</ModalText>
         <ModaleWrapper>
           <ModalButton onClick={showModal}>Open Modal</ModalButton>
-          <ModalContents openModal={openModal} setOpenModal={setOpenModal} />
+          <ModalContents
+            openModal={isOpenModal}
+            setOpenModal={setIsOpenModal}
+          />
         </ModaleWrapper>
       </Base>
     </>
