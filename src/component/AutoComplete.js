@@ -116,7 +116,7 @@ export default function AutoComplete({ inputText }) {
 
   return (
     <Base>
-      <AutoCompleteText>AutoCoplete</AutoCompleteText>
+      <AutoCompleteText>AutoComplete</AutoCompleteText>
       <InputWrapper>
         <InputForm value={searchText} type={"text"} onChange={handleChange} />
         <CloseBtn
