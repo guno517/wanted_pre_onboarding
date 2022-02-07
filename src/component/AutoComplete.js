@@ -71,21 +71,30 @@ const LI = styled.li`
   }
 `;
 
-export default function AutoComplete({ inputText }) {
+export default function AutoComplete() {
   const [searchText, setSearchText] = useState("");
   const [complete, setComplete] = useState([]);
 
   let completion = [];
 
+  const searchArr = [
+    "Javascript",
+    "java",
+    "python",
+    "React",
+    "Vue",
+    "중고A급",
+    "refurbished",
+    "rustic",
+  ];
+
   const handleChange = (e) => {
     let inputWord = e.target.value;
     completion = [];
     if (inputWord.length > 0) {
-      completion =
-        inputText &&
-        inputText
-          .sort()
-          .filter((e) => e.toLowerCase().includes(inputWord.toLowerCase()));
+      completion = searchArr
+        .sort()
+        .filter((e) => e.toLowerCase().includes(inputWord.toLowerCase()));
     }
     setComplete(completion);
     setSearchText(inputWord);
