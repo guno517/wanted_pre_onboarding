@@ -2,8 +2,6 @@
 
 # Toggle
 
----
-
 ![Toggle](https://user-images.githubusercontent.com/60571418/152779074-083d05b8-53f4-414f-bea9-d7808c6fd214.gif)
 
 ### 💡구현 방법
@@ -43,8 +41,6 @@
 
 # Modal
 
----
-
 ![Modal](https://user-images.githubusercontent.com/60571418/152779184-027d276e-e023-471c-bdfc-383dc6f305bd.gif)
 
 ### 💡구현 방법
@@ -81,8 +77,6 @@
 
 # Tab
 
----
-
 ![Tab](https://user-images.githubusercontent.com/60571418/152779192-1a288a02-760c-4447-ae54-7fb50fbc9366.gif)
 
 ### 💡구현 방법
@@ -107,8 +101,6 @@
     - 해당 Tab의 내용 영역 변경
 
 # Tag
-
----
 
 ![Tag](https://user-images.githubusercontent.com/60571418/152779199-b3217f53-d0e7-40cb-8942-636a8f9bf6b2.gif)
 
@@ -138,8 +130,6 @@
   - 삭제하고 싶은 Tag 옆의 X 버튼 클릭 시 삭제
 
 # AutoComplete
-
----
 
 ![AutoComplete](https://user-images.githubusercontent.com/60571418/152779205-96b9aa47-7d65-43ae-ad8a-98e9178f2ab6.gif)
 
@@ -177,8 +167,6 @@
   - 단어 클릭 시 input에 입력된 문자가 완성된 문자로 바뀜.
 
 # ClickToEdit
-
----
 
 ![ClickToEdit](https://user-images.githubusercontent.com/60571418/152779207-f791f25e-88ed-4b4d-916d-6b0eb30d6eaa.gif)
 
