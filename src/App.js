@@ -6,24 +6,13 @@ import ClickToEdit from "./component/ClickToEdit";
 import AutoComplete from "./component/AutoComplete";
 
 function App() {
-  const inputText = [
-    "Javascript",
-    "java",
-    "python",
-    "React",
-    "Vue",
-    "중고A급",
-    "refurbished",
-    "rustic",
-  ];
-
   return (
     <div className="App">
       <Toggle />
       <Modal />
       <Tab />
       <Tag />
-      <AutoComplete inputText={inputText} />
+      <AutoComplete />
       <ClickToEdit />
     </div>
   );
