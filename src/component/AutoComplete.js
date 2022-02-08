@@ -58,6 +58,10 @@ const CloseBtn = styled.span`
   outline: none;
   cursor: pointer;
   transform: translateY(-30px);
+
+  @media screen and (min-width: 1200px) {
+    right: 19%;
+  }
 `;
 
 const Ul = styled.ul`
