@@ -8,6 +8,10 @@ const Base = styled.div`
   border: 2px solid lightgray;
   border-radius: 10px;
   margin: 5px auto;
+
+  @media screen and (min-width: 1200px) {
+    width: 65%;
+  }
 `;
 
 const ModalText = styled.div`
