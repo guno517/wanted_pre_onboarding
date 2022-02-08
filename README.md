@@ -1,5 +1,14 @@
 # Wanted_Pre_Onboarding
 
+# 과제 구현 목록
+
+- Toggle
+- Modal
+- Tab
+- Tag
+- AutoComplete
+- ClickToEdit
+
 # Toggle
 
 ![Toggle](https://user-images.githubusercontent.com/60571418/152779074-083d05b8-53f4-414f-bea9-d7808c6fd214.gif)
@@ -206,3 +215,46 @@
   - 원하는 값으로 나이 변경
   - 변경 후 input 이외의 영역을 클릭
     - 클릭 시 나이데이터가 변경됨
+
+# Folder Structure
+
+```jsx
+/src
+	App.js
+	/component
+		AutoComplete.js
+		ClickToEdit.js
+		Modal.js
+		ModalContents.js
+		Tab.js
+		Tag.js
+		Toggle.js
+```
+
+# Getting Started
+
+### Prerequisites
+
+```jsx
+npm install --global yarn
+```
+
+### Installation
+
+1. Clone the Repo
+
+   ```jsx
+   git clone https:github.com/guno517/wanted_pre_onboarding.git
+   ```
+
+2. Install Project Packages
+
+   ```jsx
+   yarn;
+   ```
+
+3. Run the Project
+
+   ```jsx
+   yarn start
+   ```
